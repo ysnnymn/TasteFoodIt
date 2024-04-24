@@ -1,0 +1,25 @@
+﻿@model List<TasteFoodIt.Entities.Info>
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="row d-flex">
+                <div class="col-md-6 d-flex">
+                    <div class="img img-2 w-100 mr-md-2" style="background-image: url(/Templates/tasteit-master/images/@item.ImageUrl);"></div>
+                    <div class="img img-2 w-100 ml-md-2" style="background-image: url(/Templates/tasteit-master/images/chef-2.jpg);"></div>
+                </div>
+                <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
+                    <div class="heading-section ftco-animate mb-5">
+                        <span class="subheading">@item.Title</span>
+                    >
+                        <p>
+                           @item.Description
+                        </p>
+                        <p><a href="#" class="btn btn-primary">Daha Fazla</a></p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>

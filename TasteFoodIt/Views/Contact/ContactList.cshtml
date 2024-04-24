@@ -1,0 +1,70 @@
+﻿@model TasteFoodIt.Entities.Contact
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <!-- Simple Tables -->
+            <div class="card">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Id</th>
+                                <th>Başlık</th>
+                                <th>Açıklama</th>
+                                <th>Resim</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @foreach (var item in Model)
+                            {
+
+                                count++;
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.ImageUrl</td>
+
+
+
+                                </tr>
+                            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn  btn-success">Güncelle</a></td>
+                            <td><a href="/About/DeleteAbout/@item.AboutId" class="btn  btn-danger">Sil</a></td>
+                        }
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+                    </div>
+                    <div class="card-footer"></div>
+                    @if (ViewBag.about < 1)
+                    {
+                        <a href="/About/CreateAbout" class="btn  btn-info">Hakkımda Oluştur</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+

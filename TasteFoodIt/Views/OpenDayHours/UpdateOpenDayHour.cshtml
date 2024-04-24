@@ -1,0 +1,50 @@
+﻿@model TasteFoodIt.Entities.OpenDayHour
+@{
+    ViewBag.Title = "UpdateOpenDayHour";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+@{
+    var days = new List<SelectListItem>();
+    days.Add(new SelectListItem { Text = "Pazartesi", Value = "Pazartesi" });
+    days.Add(new SelectListItem { Text = "Salı", Value = "Salı" });
+    days.Add(new SelectListItem { Text = "Çarşamba", Value = "Çarşamba" });
+    days.Add(new SelectListItem { Text = "Perşembe", Value = "Perşembe" });
+    days.Add(new SelectListItem { Text = "Cuma", Value = "Cuma" });
+    days.Add(new SelectListItem { Text = "Cumartesi", Value = "Cumartesi" });
+    days.Add(new SelectListItem { Text = "Pazar", Value = "Pazar" });
+}
+<div class="container-fluid" id="container-wrapper">
+
+
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Form Basic -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Açış Saati Güncelleme</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        @Html.HiddenFor(x=>x.OpenDayHourId)
+                        <div class="form-group">
+                            <label>Gün</label>
+                            @Html.DropDownListFor(model => model.DayName, days, "Gün Seçiniz", new { @class = "form-control" })
+                            <br />
+                            <label>Açılış- Kapanış  Saati</label>
+                            @Html.TextBoxFor(x => x.OpenHourRange, new { @class = "form-control" })
+                            <br />
+
+
+                        </div><button type="submit" class="btn btn-primary">Kaydet</button>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

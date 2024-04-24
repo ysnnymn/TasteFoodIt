@@ -1,0 +1,23 @@
+﻿﻿﻿@model List<TasteFoodIt.Entities.Slider>
+
+<section class="hero-wrap ">
+    <div class="home-slider owl-carousel js-fullheight ftco-no-pb ftco-no-pt">
+        @foreach (var item in Model)
+        {
+            <div class="slider-item js-fullheight " style="background-image:url(@item.ImageUrl);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 mt-5 text-center">
+                                <span class="subheading">@item.Title</span>
+                                <h1>@item.Description</h1>
+                                <span class="subheading-2">@item.MinDescription</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
