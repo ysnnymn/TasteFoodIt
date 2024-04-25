@@ -217,6 +217,7 @@
     <Content Include="Templates\colorlib-error-404-4\css\style.css" />
     <Content Include="Templates\colorlib-error-404-4\index.html" />
     <Content Include="Templates\colorlib-error-404-4\readme.txt" />
+    <Content Include="Templates\Images\logo.jpg" />
     <Content Include="Templates\ruang-admin\404.html" />
     <Content Include="Templates\ruang-admin\alerts.html" />
     <Content Include="Templates\ruang-admin\blank.html" />
